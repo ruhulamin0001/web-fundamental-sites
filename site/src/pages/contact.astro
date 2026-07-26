@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { siteData, allAddresses } from '../site-data.mjs';
+---
+<Base title="Contact" description={`Get in touch with ${siteData.brand}.`}>
+  <section style="padding-top:4rem;">
+    <div class="wrap narrow">
+      <p class="eyebrow">Contact</p>
+      <h1 style="font-size:clamp(1.9rem,5vw,2.6rem);margin:0.4rem 0 1rem;">Let's talk.</h1>
+      <p style="font-size:1.15rem;color:var(--muted);">The quickest way to reach me is email — I read everything and reply the same working day, Monday to Friday, UK time.</p>
+
+      <div style="display:grid;gap:0.75rem;margin:2rem 0;">
+        {allAddresses.map((address) => (
+          <a href={`mailto:${address}`} style="display:flex;align-items:center;gap:0.75rem;padding:1rem 1.25rem;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);font-weight:500;">
+            <span style="color:var(--brand);"><Icon name="mail" size={20} /></span>
+            {address}
+          </a>
+        ))}
+      </div>
+
+      <a class="btn btn-primary" href={`mailto:${allAddresses[0]}`}>Email me now<Icon name="arrow" size={18} /></a>
+    </div>
+  </section>
+</Base>

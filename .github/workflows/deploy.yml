@@ -1,0 +1,37 @@
+name: Deploy
+
+# Triggers a Hostinger redeploy after a successful build.
+#
+# Hostinger Docker Manager exposes a rebuild webhook per project. Put its URL in
+# a repo secret named HOSTINGER_DEPLOY_HOOK, then this fires it on every push to
+# main. If you deploy by pulling the repo on the server instead, swap the curl
+# step for an SSH step (commented below).
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  redeploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      # secrets can't be read directly in an `if:` — surface it as env first.
+      DEPLOY_HOOK: ${{ secrets.HOSTINGER_DEPLOY_HOOK }}
+    steps:
+      - name: Trigger Hostinger rebuild
+        if: ${{ env.DEPLOY_HOOK != '' }}
+        run: curl -fsSL -X POST "$DEPLOY_HOOK"
+
+      # --- Alternative: SSH pull + rebuild on the VPS ------------------------
+      # - name: Deploy over SSH
+      #   uses: appleboy/ssh-action@v1
+      #   with:
+      #     host: srv1569293.hstgr.cloud
+      #     username: root
+      #     key: ${{ secrets.VPS_SSH_KEY }}
+      #     script: |
+      #       cd /srv/ruhul-sites
+      #       git pull
+      #       docker compose up -d --build

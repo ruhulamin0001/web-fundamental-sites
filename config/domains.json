@@ -1,0 +1,564 @@
+{
+  "vps": {
+    "host": "srv1569293.hstgr.cloud",
+    "user": "root",
+    "webroot": "/srv/www",
+    "ip": "72.62.213.196"
+  },
+  "email": {
+    "forwardTo": "ruhulsedu001@gmail.com",
+    "addresses": [
+      "info",
+      "admin",
+      "support",
+      "hello"
+    ],
+    "catchAll": true
+  },
+  "defaults": {
+    "locale": "en-GB",
+    "author": "Ruhul Amin"
+  },
+  "excluded": [
+    "earningmoneyonline.co.uk",
+    "sponsorjobuk.com"
+  ],
+  "domains": [
+    {
+      "domain": "adminruhulamin.co.uk",
+      "brand": "Ruhul Amin",
+      "primaryColor": "#1d4ed8",
+      "accentColor": "#0ea5e9",
+      "status": "live",
+      "hero": {
+        "eyebrow": "Automation · Admin · Digital Systems",
+        "title": "I build the systems that run your business — so you don't have to.",
+        "subtitle": "I'm Ruhul Amin. I help UK small businesses cut manual admin, automate the repetitive work, and put clean digital systems in place — from a one-off fix to a fully hands-off operation.",
+        "primaryCta": {
+          "label": "Get in touch",
+          "href": "/contact/"
+        },
+        "secondaryCta": {
+          "label": "What I do",
+          "href": "#services"
+        }
+      },
+      "features": [
+        {
+          "icon": "flow",
+          "title": "Automation",
+          "body": "Repetitive tasks wired to run themselves, end to end."
+        },
+        {
+          "icon": "shield",
+          "title": "Admin, done for you",
+          "body": "Inbox, data and documents handled so nothing slips."
+        },
+        {
+          "icon": "spark",
+          "title": "Built, not just advised",
+          "body": "I design and ship the systems — not just hand you a plan."
+        }
+      ],
+      "services": [
+        {
+          "title": "Automation & AI workflows",
+          "body": "Connect your tools so quotes, follow-ups and reports trigger themselves — no more copy-paste."
+        },
+        {
+          "title": "Back-office admin",
+          "body": "Inbox, scheduling, data entry and documents, handled reliably in the background."
+        },
+        {
+          "title": "Digital operations",
+          "body": "Websites, domains, email and the small systems a modern business runs on."
+        },
+        {
+          "title": "Custom builds",
+          "body": "Need something specific? I build tools and dashboards around how you actually work."
+        }
+      ],
+      "about": {
+        "title": "About Ruhul Amin",
+        "body": "I'm Ruhul Amin — a British Bangladeshi builder and operator. I work with sole traders, care-sector operators and small teams across the UK who want to move faster without hiring. I don't just advise — I build and ship: automations, admin systems and the digital products behind several live ventures. Straight talk, fixed pricing, real delivery."
+      },
+      "cta": {
+        "title": "Got a process that's eating your time?",
+        "body": "Tell me what's slowing you down. I'll come back with a clear plan and a fixed price.",
+        "button": {
+          "label": "Email me",
+          "href": "mailto:info@adminruhulamin.co.uk"
+        }
+      },
+      "seo": {
+        "description": "Ruhul Amin — automation, back-office admin and digital systems for UK small businesses. Built and shipped, not just advised.",
+        "keywords": [
+          "automation agency uk",
+          "business admin",
+          "workflow automation",
+          "digital systems",
+          "ruhul amin"
+        ]
+      },
+      "gscVerification": ""
+    },
+    {
+      "domain": "aimovieseller.co.uk",
+      "brand": "AI Movie Seller",
+      "primaryColor": "#7c3aed",
+      "accentColor": "#a855f7",
+      "status": "draft",
+      "hero": {
+        "eyebrow": "AI Video Marketplace",
+        "title": "Ready-made AI videos, made to post and sell.",
+        "subtitle": "Buy done-for-you AI videos and shorts, commission your own, or learn to make them. Cinematic, faceless content for creators, channels and brands — ready to publish.",
+        "primaryCta": {
+          "label": "Browse videos",
+          "href": "#services"
+        },
+        "secondaryCta": {
+          "label": "Commission custom",
+          "href": "/contact/"
+        }
+      },
+      "features": [
+        {
+          "icon": "spark",
+          "title": "Ready to post",
+          "body": "Cinematic AI videos you can buy and publish today."
+        },
+        {
+          "icon": "flow",
+          "title": "Custom on request",
+          "body": "Or commission videos built around your brief."
+        },
+        {
+          "icon": "shield",
+          "title": "Learn to make your own",
+          "body": "Guides and courses on faceless AI video creation."
+        }
+      ],
+      "services": [
+        {
+          "title": "Buy ready-made videos",
+          "body": "A growing library of faceless AI videos and shorts — priced to grab, download and post."
+        },
+        {
+          "title": "Commission custom videos",
+          "body": "Send a brief and get post-ready AI content made for your channel, product or ad."
+        },
+        {
+          "title": "Learn AI video",
+          "body": "Step-by-step guides and courses to make faceless AI videos yourself."
+        }
+      ],
+      "about": {
+        "title": "About AI Movie Seller",
+        "body": "AI Movie Seller is a one-stop shop for faceless AI video — buy ready-made content, order custom pieces, or learn to make your own. Built for creators and brands who want to move fast and stand out on modern feeds."
+      },
+      "cta": {
+        "title": "Want AI videos that get watched?",
+        "body": "Browse the library, or send your brief and get post-ready content back.",
+        "button": {
+          "label": "Get started",
+          "href": "mailto:info@aimovieseller.co.uk"
+        }
+      },
+      "seo": {
+        "description": "Buy ready-made faceless AI videos and shorts, commission custom AI content, or learn to make your own. For creators and brands.",
+        "keywords": [
+          "buy ai videos",
+          "faceless ai content",
+          "ai shorts for sale",
+          "ai video marketplace"
+        ]
+      },
+      "gscVerification": ""
+    },
+    {
+      "domain": "cardrivinginstructor.co.uk",
+      "brand": "Car Driving Instructor",
+      "primaryColor": "#059669",
+      "accentColor": "#10b981",
+      "status": "draft",
+      "hero": {
+        "eyebrow": "Find & Review Driving Instructors",
+        "title": "Find a driving instructor you can trust.",
+        "subtitle": "Compare DVSA-qualified driving instructors across the UK, read real learner reviews, and book with confidence. The trusted place to find your instructor.",
+        "primaryCta": {
+          "label": "Find an instructor",
+          "href": "#services"
+        },
+        "secondaryCta": {
+          "label": "How it works",
+          "href": "#services"
+        }
+      },
+      "features": [
+        {
+          "icon": "shield",
+          "title": "Verified instructors",
+          "body": "DVSA-qualified instructors with genuine learner reviews."
+        },
+        {
+          "icon": "spark",
+          "title": "Honest reviews",
+          "body": "Real ratings from learners who passed — not marketing."
+        },
+        {
+          "icon": "flow",
+          "title": "Free for learners",
+          "body": "Search, compare and connect at no cost to you."
+        }
+      ],
+      "services": [
+        {
+          "title": "Search by area",
+          "body": "Find DVSA-qualified instructors near you, anywhere in the UK."
+        },
+        {
+          "title": "Read real reviews",
+          "body": "See honest ratings and feedback from learners who passed their test."
+        },
+        {
+          "title": "Are you an instructor?",
+          "body": "List your profile and reach learners ready to book. Instructor sign-ups coming soon."
+        }
+      ],
+      "about": {
+        "title": "About us",
+        "body": "We are building the trusted place to find driving instructors in the UK — think Trustpilot, but for learning to drive. Learners compare instructors and read honest reviews; instructors reach students who are ready to book. Free for learners, always."
+      },
+      "cta": {
+        "title": "Learning to drive? Find your instructor.",
+        "body": "Search verified instructors and read real learner reviews across the UK.",
+        "button": {
+          "label": "Register your interest",
+          "href": "mailto:info@cardrivinginstructor.co.uk"
+        }
+      },
+      "seo": {
+        "description": "Find and review DVSA-qualified driving instructors across the UK. Compare local instructors, read real learner reviews, and book with confidence.",
+        "keywords": [
+          "driving instructor reviews",
+          "find driving instructor uk",
+          "driving lessons near me",
+          "compare driving instructors"
+        ]
+      },
+      "gscVerification": ""
+    },
+    {
+      "domain": "carestaffsync.co.uk",
+      "brand": "Care Staff Sync",
+      "primaryColor": "#0d9488",
+      "accentColor": "#14b8a6",
+      "status": "draft",
+      "hero": {
+        "eyebrow": "Care Staffing Platform",
+        "title": "Connecting care providers and carers across the UK.",
+        "subtitle": "Find vetted care staff fast, or find your next care role. Care Staff Sync brings providers and carers together — jobs, matching and reliable cover in one place.",
+        "primaryCta": {
+          "label": "Find staff",
+          "href": "/contact/"
+        },
+        "secondaryCta": {
+          "label": "Find care work",
+          "href": "#services"
+        }
+      },
+      "features": [
+        {
+          "icon": "shield",
+          "title": "Vetted & compliant",
+          "body": "DBS-checked, referenced and compliance-ready staff only."
+        },
+        {
+          "icon": "flow",
+          "title": "Fast matching",
+          "body": "Fill shifts and find roles quickly, including short notice."
+        },
+        {
+          "icon": "check",
+          "title": "Jobs + agency in one",
+          "body": "A live care jobs board and a staffing service, together."
+        }
+      ],
+      "services": [
+        {
+          "title": "For care providers",
+          "body": "Get vetted temporary and permanent staff, matched fast, without the usual agency runaround."
+        },
+        {
+          "title": "For carers",
+          "body": "Find well-matched shifts, permanent roles and career-building care work."
+        },
+        {
+          "title": "Care jobs board",
+          "body": "Browse live care-sector vacancies across the UK, updated regularly."
+        },
+        {
+          "title": "Temporary & permanent",
+          "body": "Cover a single shift or build a long-term care team."
+        }
+      ],
+      "about": {
+        "title": "About Care Staff Sync",
+        "body": "Care Staff Sync is a UK care staffing platform built for both sides of the sector. Providers find vetted, compliance-ready staff without the agency hassle; carers find well-matched shifts, permanent roles and a live jobs board. One trusted place to connect care work with the people who do it."
+      },
+      "cta": {
+        "title": "Care provider or carer? Start here.",
+        "body": "Post your shifts, or find your next care role — anywhere in the UK.",
+        "button": {
+          "label": "Get started",
+          "href": "mailto:info@carestaffsync.co.uk"
+        }
+      },
+      "seo": {
+        "description": "UK care staffing platform — vetted staff for providers, shifts and jobs for carers, plus a live care jobs board. Temporary and permanent.",
+        "keywords": [
+          "care jobs uk",
+          "care staff agency",
+          "care assistant jobs",
+          "care home staffing",
+          "healthcare recruitment"
+        ]
+      },
+      "gscVerification": ""
+    },
+    {
+      "domain": "manvanwithequipment.co.uk",
+      "brand": "Man Van With Equipment",
+      "primaryColor": "#ea580c",
+      "accentColor": "#f97316",
+      "status": "draft",
+      "hero": {
+        "eyebrow": "Man & Van · UK-wide",
+        "title": "Find a fully-equipped man and van, anywhere in the UK.",
+        "subtitle": "Compare trusted man-with-a-van drivers, get fast quotes, and book with confidence. Fully equipped for house moves, single items and deliveries.",
+        "primaryCta": {
+          "label": "Get quotes",
+          "href": "/contact/"
+        },
+        "secondaryCta": {
+          "label": "How it works",
+          "href": "#services"
+        }
+      },
+      "features": [
+        {
+          "icon": "shield",
+          "title": "Trusted drivers",
+          "body": "Reliable, fully-equipped man-van drivers with real reviews."
+        },
+        {
+          "icon": "flow",
+          "title": "Fast quotes",
+          "body": "Send your job once and get quotes back quickly."
+        },
+        {
+          "icon": "check",
+          "title": "Fully equipped",
+          "body": "Trolleys, straps and blankets — every job done right."
+        }
+      ],
+      "services": [
+        {
+          "title": "House & flat moves",
+          "body": "Full or part moves with the muscle and kit to do it properly."
+        },
+        {
+          "title": "Single item delivery",
+          "body": "Sofas, appliances and furniture moved safely, anywhere in the UK."
+        },
+        {
+          "title": "Store pickups",
+          "body": "Collect and deliver from IKEA, marketplaces and warehouses."
+        },
+        {
+          "title": "Are you a driver?",
+          "body": "List your man-van service and get matched with local jobs. Driver sign-ups coming soon."
+        }
+      ],
+      "about": {
+        "title": "About us",
+        "body": "We connect people who need to move something with trusted, fully-equipped man-and-van drivers across the UK. Get fast quotes, read reviews and book with confidence — while drivers reach customers ready to book. Simple, reliable, nationwide."
+      },
+      "cta": {
+        "title": "Moving something soon?",
+        "body": "Tell us the job and get fast quotes from trusted man-van drivers near you.",
+        "button": {
+          "label": "Get quotes",
+          "href": "mailto:info@manvanwithequipment.co.uk"
+        }
+      },
+      "seo": {
+        "description": "Find and compare fully-equipped man-and-van drivers across the UK. Fast quotes for house moves, single items and deliveries.",
+        "keywords": [
+          "man with a van uk",
+          "man and van quotes",
+          "removals",
+          "furniture delivery",
+          "house move"
+        ]
+      },
+      "gscVerification": ""
+    },
+    {
+      "domain": "earningfreemoney.co.uk",
+      "brand": "Earning Free Money",
+      "primaryColor": "#16a34a",
+      "accentColor": "#22c55e",
+      "status": "draft",
+      "hero": {
+        "eyebrow": "Make Money Online · UK",
+        "title": "Real, free ways to earn money online — no fluff.",
+        "subtitle": "Honest, tested guides to legit side hustles, cashback and free-money offers that actually pay. No scams, no hype — just what works.",
+        "primaryCta": {
+          "label": "Read the guides",
+          "href": "#services"
+        },
+        "secondaryCta": {
+          "label": "About",
+          "href": "#about"
+        }
+      },
+      "features": [
+        {
+          "icon": "check",
+          "title": "Tested & honest",
+          "body": "Only methods we have tried and seen actually pay out."
+        },
+        {
+          "icon": "spark",
+          "title": "Free to start",
+          "body": "No upfront cost — free-to-join offers only."
+        },
+        {
+          "icon": "flow",
+          "title": "Updated often",
+          "body": "Fresh offers and guides added regularly."
+        }
+      ],
+      "services": [
+        {
+          "title": "Best cashback sites 2026",
+          "body": "Where to get real money back on spending you already do."
+        },
+        {
+          "title": "Free sign-up bonuses",
+          "body": "Legit apps and banks that pay you just to join."
+        },
+        {
+          "title": "Paid surveys that pay",
+          "body": "The few survey sites worth your time — and the ones to skip."
+        },
+        {
+          "title": "Side hustles that work",
+          "body": "Simple ways to earn extra in your spare time, ranked and tested."
+        }
+      ],
+      "about": {
+        "title": "Why this site",
+        "body": "The make-money-online space is full of hype and scams. Earning Free Money cuts through it with honest, tested guides — so you can earn a bit extra online without wasting time or getting burned."
+      },
+      "cta": {
+        "title": "Start earning this week",
+        "body": "Pick a guide, follow the simple steps, and start seeing real results.",
+        "button": {
+          "label": "Browse the guides",
+          "href": "#services"
+        }
+      },
+      "seo": {
+        "description": "Honest, tested guides to free ways to earn money online in the UK — cashback, sign-up bonuses, paid surveys and legit side hustles.",
+        "keywords": [
+          "earn money online free",
+          "cashback uk",
+          "side hustle uk",
+          "free money apps",
+          "paid surveys uk"
+        ]
+      },
+      "gscVerification": ""
+    },
+    {
+      "domain": "savemoneytricks.co.uk",
+      "brand": "Save Money Tricks",
+      "primaryColor": "#4f46e5",
+      "accentColor": "#6366f1",
+      "status": "draft",
+      "hero": {
+        "eyebrow": "Money-Saving Tips · UK",
+        "title": "Clever money-saving tricks that actually add up.",
+        "subtitle": "Simple, practical ways to cut bills, grab the best deals and keep more of what you earn. Bite-sized UK money-saving tricks you can use today.",
+        "primaryCta": {
+          "label": "Read the tips",
+          "href": "#services"
+        },
+        "secondaryCta": {
+          "label": "About",
+          "href": "#about"
+        }
+      },
+      "features": [
+        {
+          "icon": "check",
+          "title": "Practical tips",
+          "body": "Real actions you can take today — not vague advice."
+        },
+        {
+          "icon": "spark",
+          "title": "UK deals & vouchers",
+          "body": "The best current UK deals, codes and discounts."
+        },
+        {
+          "icon": "flow",
+          "title": "New weekly",
+          "body": "Fresh money-saving tricks added every week."
+        }
+      ],
+      "services": [
+        {
+          "title": "Cut your energy bill",
+          "body": "Simple switches and habits that lower what you pay each month."
+        },
+        {
+          "title": "Supermarket savings",
+          "body": "Shop smarter and spend less on the weekly shop."
+        },
+        {
+          "title": "Best UK deals & voucher codes",
+          "body": "Current discounts and codes actually worth using."
+        },
+        {
+          "title": "Best UK cashback",
+          "body": "Get money back on spending you are doing anyway."
+        }
+      ],
+      "about": {
+        "title": "About",
+        "body": "No get-rich-quick nonsense — just clear, practical money-saving tricks that help ordinary UK households cut bills, shop smarter and keep more of their money."
+      },
+      "cta": {
+        "title": "Start saving today",
+        "body": "Try one trick this week and feel the difference in your budget.",
+        "button": {
+          "label": "Browse the tips",
+          "href": "#services"
+        }
+      },
+      "seo": {
+        "description": "Practical, UK-focused money-saving tricks to cut bills, find the best deals and vouchers, and keep more of what you earn.",
+        "keywords": [
+          "save money uk",
+          "voucher codes uk",
+          "cut energy bills",
+          "money saving tips",
+          "uk deals"
+        ]
+      },
+      "gscVerification": ""
+    }
+  ]
+}

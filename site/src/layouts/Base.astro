@@ -1,0 +1,135 @@
+---
+import { siteData, contactEmail } from '../site-data.mjs';
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} — ${siteData.brand}` : `${siteData.brand} — ${siteData.hero.eyebrow || siteData.seo.description}`;
+const pageDesc = description ?? siteData.seo.description;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang={siteData.locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    {siteData.seo.keywords.length > 0 && <meta name="keywords" content={siteData.seo.keywords.join(', ')} />}
+    <meta name="author" content={siteData.author} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content={siteData.primaryColor} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteData.brand} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={siteData.locale.replace('-', '_')} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDesc} />
+
+    {siteData.gscVerification && !siteData.gscVerification.startsWith('REPLACE') && (
+      <meta name="google-site-verification" content={siteData.gscVerification.replace('google-site-verification=', '')} />
+    )}
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      name: siteData.brand,
+      url: `https://${siteData.domain}`,
+      description: siteData.seo.description,
+      email: contactEmail,
+      areaServed: 'GB',
+      founder: { '@type': 'Person', name: siteData.author },
+    })} />
+
+    <style is:inline set:html={`:root{--brand:${siteData.primaryColor};--accent:${siteData.accentColor};}`}></style>
+
+    <style>
+      :root {
+        --ink: #0f172a;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --bg: #ffffff;
+        --soft: #f8fafc;
+        --radius: 14px;
+        --maxw: 76ch;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+      .narrow { max-width: var(--maxw); }
+      a { color: var(--brand); }
+
+      /* header */
+      header.site {
+        position: sticky; top: 0; z-index: 50;
+        background: rgba(255,255,255,0.85);
+        backdrop-filter: saturate(1.2) blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+      .brand { font-weight: 800; font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+      .brand span { color: var(--brand); }
+      header nav a { color: var(--muted); text-decoration: none; margin-left: 1.5rem; font-weight: 500; font-size: 0.95rem; }
+      header nav a:hover { color: var(--ink); }
+
+      h1, h2, h3 { letter-spacing: -0.025em; line-height: 1.15; }
+      h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin: 0 0 0.75rem; }
+
+      .btn {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        padding: 0.75rem 1.4rem; border-radius: 10px; font-weight: 600; font-size: 0.98rem;
+        text-decoration: none; border: 1px solid transparent; transition: transform .06s ease, box-shadow .2s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 6px 20px -8px var(--brand); }
+      .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+
+      section { padding: 4.5rem 0; }
+      section.soft { background: var(--soft); }
+      .eyebrow { color: var(--brand); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+
+      footer.site { border-top: 1px solid var(--line); padding: 2.5rem 0; color: var(--muted); font-size: 0.92rem; }
+      footer.site .wrap { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+      footer.site a { color: var(--brand); text-decoration: none; }
+
+      @media (max-width: 640px) {
+        header nav a:first-child { display: none; }
+        section { padding: 3rem 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="/">{siteData.brand.split(' ')[0]}<span>{siteData.brand.includes(' ') ? ' ' + siteData.brand.split(' ').slice(1).join(' ') : ''}</span></a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main><slot /></main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div>&copy; {year} {siteData.brand}</div>
+        <div><a href={`mailto:${contactEmail}`}>{contactEmail}</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

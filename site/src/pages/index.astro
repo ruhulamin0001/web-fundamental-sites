@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { siteData } from '../site-data.mjs';
+
+const { hero, features, services, about, cta } = siteData;
+---
+<Base>
+  <!-- Hero -->
+  <section style="padding-top:5rem;">
+    <div class="wrap narrow" style="text-align:center;">
+      {hero.eyebrow && <p class="eyebrow">{hero.eyebrow}</p>}
+      <h1 style="font-size:clamp(2.1rem,6vw,3.4rem);margin:0.5rem 0 1rem;">{hero.title}</h1>
+      <p style="font-size:1.2rem;color:var(--muted);max-width:60ch;margin:0 auto 2rem;">{hero.subtitle}</p>
+      <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+        {hero.primaryCta && <a class="btn btn-primary" href={hero.primaryCta.href}>{hero.primaryCta.label}<Icon name="arrow" size={18} /></a>}
+        {hero.secondaryCta && <a class="btn btn-ghost" href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>}
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  {features.length > 0 && (
+    <section class="soft">
+      <div class="wrap">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
+          {features.map((f) => (
+            <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.75rem;">
+              <div style="color:var(--brand);margin-bottom:0.75rem;"><Icon name={f.icon} size={28} /></div>
+              <h3 style="font-size:1.1rem;margin:0 0 0.4rem;">{f.title}</h3>
+              <p style="color:var(--muted);margin:0;">{f.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Services -->
+  {services.length > 0 && (
+    <section id="services">
+      <div class="wrap">
+        <p class="eyebrow">What I do</p>
+        <h2>Services</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:1.5rem;">
+          {services.map((s) => (
+            <div style="border-left:3px solid var(--brand);padding:0.25rem 0 0.25rem 1.25rem;">
+              <h3 style="font-size:1.1rem;margin:0 0 0.35rem;">{s.title}</h3>
+              <p style="color:var(--muted);margin:0;">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- About -->
+  {about && (
+    <section class="soft">
+      <div class="wrap narrow">
+        <p class="eyebrow">About</p>
+        <h2>{about.title}</h2>
+        <p style="font-size:1.1rem;color:var(--muted);">{about.body}</p>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  {cta && (
+    <section>
+      <div class="wrap narrow" style="text-align:center;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border-radius:20px;padding:3rem 2rem;">
+        <h2 style="color:#fff;">{cta.title}</h2>
+        <p style="opacity:0.92;font-size:1.1rem;margin-bottom:1.5rem;">{cta.body}</p>
+        {cta.button && <a class="btn" style="background:#fff;color:var(--brand);" href={cta.button.href}>{cta.button.label}</a>}
+      </div>
+    </section>
+  )}
+</Base>

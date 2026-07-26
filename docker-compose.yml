@@ -1,0 +1,22 @@
+# Deploy target for Hostinger Docker Manager.
+# Point Docker Manager at this repo; it builds the image and runs this stack.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ruhul-sites
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Persist Let's Encrypt certs across rebuilds so you don't hit rate limits.
+      - caddy_data:/data
+      - caddy_config:/config
+      - caddy_logs:/var/log/caddy
+
+volumes:
+  caddy_data:
+  caddy_config:
+  caddy_logs:

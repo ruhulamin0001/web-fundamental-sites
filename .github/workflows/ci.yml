@@ -1,0 +1,42 @@
+name: CI
+
+# Build every domain on push/PR so a broken config never reaches the VPS.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install
+        working-directory: site
+        run: npm install --no-fund --no-audit
+
+      - name: Build all domains
+        run: node build-all.mjs
+
+      - name: Check Caddyfile is up to date
+        run: |
+          node scripts/gen-caddy.mjs
+          if ! git diff --quiet caddy/Caddyfile; then
+            echo "::error::caddy/Caddyfile is stale. Run 'node scripts/gen-caddy.mjs' and commit."
+            git diff caddy/Caddyfile
+            exit 1
+          fi
+
+      - name: Upload built sites
+        uses: actions/upload-artifact@v4
+        with:
+          name: sites
+          path: site/dist/
